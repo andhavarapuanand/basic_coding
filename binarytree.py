@@ -1,9 +1,10 @@
+#binary search tree insertion
 class Node:
     def __init__(self,data):
         self.data=data
         self.left=None
         self.right=None
-    def insert(self,data):
+    def insertion(self,data):
         if self.data:
             if data<self.data:
                 if self.left is None:
@@ -36,6 +37,6 @@ n=int(input())
 l=list(map(int,input().split()))
 root=Node(l[0])
 for i in range(1,n):
-    root.insert(l[i])
+    root.insertion(l[i])
 root.print()
 root.inorder(root)    
